@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Tooltip Styles for Leaflet */
+.line-tooltip {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: white !important;
+    font-weight: bold;
+    font-size: 14px; /* Slightly larger */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000, /* Halo effect */
+         0 2px 4px rgba(0,0,0,0.8);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.station-marker {
+    transition: all 0.3s ease;
+}
+.station-marker:hover {
+    fill-opacity: 1;
+    stroke: white;
+    stroke-width: 2px;
+}

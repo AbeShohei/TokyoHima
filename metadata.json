@@ -1,0 +1,5 @@
+{
+  "name": "Ultimate 3D Dice",
+  "description": "A photorealistic interactive 3D dice roller using React Three Fiber, Cannon physics, and HDRI lighting.",
+  "requestFramePermissions": []
+}
