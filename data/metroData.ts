@@ -1,6 +1,9 @@
 export interface Spot {
   name: string;
   time: string;
+  description?: string;
+  minutes?: number;
+  coords?: [number, number];
 }
 
 export interface Station {
@@ -94,7 +97,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.692452,
           139.700548
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "新宿御苑",
+            "time": "2時間",
+            "description": "四季折々の自然が楽しめる広大な庭園。",
+            "minutes": 10,
+            "coords": [
+              35.6852,
+              139.7101
+            ]
+          },
+          {
+            "name": "東京都庁展望室",
+            "time": "1時間",
+            "description": "東京の街を一望できる無料展望台。",
+            "minutes": 12,
+            "coords": [
+              35.6896,
+              139.6917
+            ]
+          },
+          {
+            "name": "思い出横丁",
+            "time": "1.5時間",
+            "description": "昭和レトロな飲み屋街。",
+            "minutes": 3,
+            "coords": [
+              35.6931,
+              139.6996
+            ]
+          }
+        ]
       },
       {
         "id": "M09",
@@ -139,7 +173,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.676845,
           139.737347
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "豊川稲荷東京別院",
+            "time": "30分",
+            "description": "芸能人も訪れるパワースポット。",
+            "minutes": 5,
+            "coords": [
+              35.6763,
+              139.7329
+            ]
+          }
+        ]
       },
       {
         "id": "M14",
@@ -166,7 +211,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.673159,
           139.763876
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "銀座三越",
+            "time": "2時間",
+            "description": "銀座のランドマーク的デパート。",
+            "minutes": 1,
+            "coords": [
+              35.6716,
+              139.7656
+            ]
+          },
+          {
+            "name": "歌舞伎座",
+            "time": "1時間",
+            "description": "日本の伝統芸能、歌舞伎の殿堂。",
+            "minutes": 5,
+            "coords": [
+              35.6695,
+              139.7679
+            ]
+          },
+          {
+            "name": "銀座シックス",
+            "time": "2時間",
+            "description": "ラグジュアリーな複合商業施設。",
+            "minutes": 3,
+            "coords": [
+              35.6696,
+              139.764
+            ]
+          }
+        ]
       },
       {
         "id": "M17",
@@ -175,7 +251,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.681935,
           139.7648
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京駅丸の内駅舎",
+            "time": "30分",
+            "description": "辰野金吾設計の赤レンガ駅舎。",
+            "minutes": 1,
+            "coords": [
+              35.6812,
+              139.7671
+            ]
+          },
+          {
+            "name": "皇居外苑",
+            "time": "1.5時間",
+            "description": "都会のオアシス。散歩に最適。",
+            "minutes": 10,
+            "coords": [
+              35.6803,
+              139.7583
+            ]
+          },
+          {
+            "name": "KITTE丸の内",
+            "time": "1.5時間",
+            "description": "旧東京中央郵便局を活用した商業施設。",
+            "minutes": 2,
+            "coords": [
+              35.6796,
+              139.7649
+            ]
+          }
+        ]
       },
       {
         "id": "M18",
@@ -184,7 +291,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.686875,
           139.766203
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "皇居東御苑",
+            "time": "1.5時間",
+            "description": "旧江戸城の本丸・二の丸・三の丸跡。",
+            "minutes": 5,
+            "coords": [
+              35.6869,
+              139.7565
+            ]
+          }
+        ]
       },
       {
         "id": "M19",
@@ -220,7 +338,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.707307,
           139.750861
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京ドームシティ",
+            "time": "3時間",
+            "description": "スパ、アトラクション、ショッピング。",
+            "minutes": 2,
+            "coords": [
+              35.7051,
+              139.7519
+            ]
+          },
+          {
+            "name": "小石川後楽園",
+            "time": "1時間",
+            "description": "水戸黄門ゆかりの大名庭園。",
+            "minutes": 5,
+            "coords": [
+              35.7053,
+              139.7495
+            ]
+          }
+        ]
       },
       {
         "id": "M23",
@@ -247,7 +386,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.730345,
           139.71115
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "サンシャイン60展望台",
+            "time": "1.5時間",
+            "description": "「てんぼうパーク」としてリニューアル。",
+            "minutes": 10,
+            "coords": [
+              35.7289,
+              139.7197
+            ]
+          },
+          {
+            "name": "南池袋公園",
+            "time": "1時間",
+            "description": "芝生が気持ちいい都会の公園。",
+            "minutes": 5,
+            "coords": [
+              35.7266,
+              139.7153
+            ]
+          }
+        ]
       }
     ]
   },
@@ -272,7 +432,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.669104,
           139.689791
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "代々木公園",
+            "time": "1.5時間",
+            "description": "都心で一番広い空が見える公園。",
+            "minutes": 3,
+            "coords": [
+              35.6717,
+              139.6949
+            ]
+          }
+        ]
       },
       {
         "id": "C03",
@@ -281,7 +452,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.669123,
           139.703944
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "明治神宮",
+            "time": "1.5時間",
+            "description": "広大な鎮守の杜。",
+            "minutes": 1,
+            "coords": [
+              35.6764,
+              139.6993
+            ]
+          },
+          {
+            "name": "竹下通り",
+            "time": "1時間",
+            "description": "カワイイ文化の発信地。",
+            "minutes": 2,
+            "coords": [
+              35.6712,
+              139.7042
+            ]
+          }
+        ]
       },
       {
         "id": "C04",
@@ -290,7 +482,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.665652,
           139.711346
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "表参道ヒルズ",
+            "time": "1.5時間",
+            "description": "最先端のトレンド発信地。",
+            "minutes": 2,
+            "coords": [
+              35.6672,
+              139.709
+            ]
+          },
+          {
+            "name": "根津美術館",
+            "time": "1.5時間",
+            "description": "日本・東洋の古美術と見事な庭園。",
+            "minutes": 8,
+            "coords": [
+              35.6631,
+              139.718
+            ]
+          }
+        ]
       },
       {
         "id": "C05",
@@ -299,7 +512,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.666592,
           139.726229
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "国立新美術館",
+            "time": "2時間",
+            "description": "国内最大級の展示スペース。",
+            "minutes": 0,
+            "coords": [
+              35.6653,
+              139.7263
+            ]
+          }
+        ]
       },
       {
         "id": "C06",
@@ -308,7 +532,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.672104,
           139.736413
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "赤坂サカス",
+            "time": "1.5時間",
+            "description": "TBS放送センターを中心とした複合施設。",
+            "minutes": 0,
+            "coords": [
+              35.6738,
+              139.7356
+            ]
+          }
+        ]
       },
       {
         "id": "C07",
@@ -335,7 +570,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.673955,
           139.758765
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "日比谷公園",
+            "time": "1時間",
+            "description": "日本初の洋風近代式公園。",
+            "minutes": 1,
+            "coords": [
+              35.6736,
+              139.756
+            ]
+          },
+          {
+            "name": "東京ミッドタウン日比谷",
+            "time": "1.5時間",
+            "description": "映画・演劇・食事の中心地。",
+            "minutes": 0,
+            "coords": [
+              35.6738,
+              139.7584
+            ]
+          }
+        ]
       },
       {
         "id": "C10",
@@ -353,7 +609,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.68525,
           139.763285
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "皇居東御苑",
+            "time": "1.5時間",
+            "description": "旧江戸城の本丸・二の丸・三の丸跡。",
+            "minutes": 5,
+            "coords": [
+              35.6869,
+              139.7565
+            ]
+          }
+        ]
       },
       {
         "id": "C12",
@@ -362,7 +629,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.696925,
           139.76545
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "ニコライ堂",
+            "time": "30分",
+            "description": "日本初のビザンティン様式の聖堂。",
+            "minutes": 2,
+            "coords": [
+              35.6983,
+              139.7656
+            ]
+          }
+        ]
       },
       {
         "id": "C13",
@@ -371,7 +649,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.706805,
           139.769981
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "湯島天満宮",
+            "time": "45分",
+            "description": "学問の神様。",
+            "minutes": 2,
+            "coords": [
+              35.7078,
+              139.7682
+            ]
+          }
+        ]
       },
       {
         "id": "C14",
@@ -380,7 +669,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.717325,
           139.76575
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "根津神社",
+            "time": "45分",
+            "description": "つつじの名所として有名。",
+            "minutes": 5,
+            "coords": [
+              35.7202,
+              139.7607
+            ]
+          }
+        ]
       },
       {
         "id": "C15",
@@ -398,7 +698,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.732355,
           139.76689
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "谷中銀座商店街",
+            "time": "1.5時間",
+            "description": "下町情緒あふれる商店街。",
+            "minutes": 5,
+            "coords": [
+              35.7275,
+              139.7648
+            ]
+          }
+        ]
       },
       {
         "id": "C17",
@@ -416,7 +727,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.7492,
           139.804403
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "宿場町通り",
+            "time": "1時間",
+            "description": "日光街道の宿場町の面影を残す。",
+            "minutes": 5,
+            "coords": [
+              35.7513,
+              139.8033
+            ]
+          }
+        ]
       },
       {
         "id": "C19",
@@ -450,7 +772,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.632485,
           139.71566
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "目黒雅叙園",
+            "time": "1時間",
+            "description": "「昭和の竜宮城」と呼ばれる豪華絢爛な装飾。",
+            "minutes": 3,
+            "coords": [
+              35.632,
+              139.7118
+            ]
+          }
+        ]
       },
       {
         "id": "N02",
@@ -459,7 +792,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.63777,
           139.72586
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京都庭園美術館",
+            "time": "2時間",
+            "description": "旧朝香宮邸のアール・デコ建築。",
+            "minutes": 6,
+            "coords": [
+              35.6367,
+              139.7196
+            ]
+          },
+          {
+            "name": "国立科学博物館附属自然教育園",
+            "time": "1.5時間",
+            "description": "都心に残された貴重な自然。",
+            "minutes": 7,
+            "coords": [
+              35.6375,
+              139.7198
+            ]
+          }
+        ]
       },
       {
         "id": "N03",
@@ -477,7 +831,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.65481,
           139.737045
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "麻布十番商店街",
+            "time": "1.5時間",
+            "description": "老舗と新店が混在するグルメな商店街。",
+            "minutes": 1,
+            "coords": [
+              35.6558,
+              139.7353
+            ]
+          }
+        ]
       },
       {
         "id": "N05",
@@ -504,7 +869,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.678338,
           139.739288
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "国会議事堂",
+            "time": "1時間",
+            "description": "日本の政治の中心。",
+            "minutes": 5,
+            "coords": [
+              35.6759,
+              139.7448
+            ]
+          }
+        ]
       },
       {
         "id": "N08",
@@ -531,7 +907,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.701532,
           139.743716
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京大神宮",
+            "time": "45分",
+            "description": "東京のお伊勢さま。縁結びで有名。",
+            "minutes": 5,
+            "coords": [
+              35.6998,
+              139.746
+            ]
+          },
+          {
+            "name": "神楽坂",
+            "time": "2時間",
+            "description": "路地裏散策が楽しい粋な街。",
+            "minutes": 1,
+            "coords": [
+              35.7011,
+              139.7408
+            ]
+          }
+        ]
       },
       {
         "id": "N11",
@@ -540,7 +937,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.70839,
           139.751786
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京ドームシティ",
+            "time": "3時間",
+            "description": "スパ、アトラクション、ショッピング。",
+            "minutes": 2,
+            "coords": [
+              35.7051,
+              139.7519
+            ]
+          },
+          {
+            "name": "小石川後楽園",
+            "time": "1時間",
+            "description": "水戸黄門ゆかりの大名庭園。",
+            "minutes": 5,
+            "coords": [
+              35.7053,
+              139.7495
+            ]
+          }
+        ]
       },
       {
         "id": "N12",
@@ -700,7 +1118,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.730345,
           139.71115
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "サンシャイン60展望台",
+            "time": "1.5時間",
+            "description": "「てんぼうパーク」としてリニューアル。",
+            "minutes": 10,
+            "coords": [
+              35.7289,
+              139.7197
+            ]
+          },
+          {
+            "name": "南池袋公園",
+            "time": "1時間",
+            "description": "芝生が気持ちいい都会の公園。",
+            "minutes": 5,
+            "coords": [
+              35.7266,
+              139.7153
+            ]
+          }
+        ]
       },
       {
         "id": "F10",
@@ -754,7 +1193,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.668205,
           139.70524
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "明治神宮",
+            "time": "1.5時間",
+            "description": "広大な鎮守の杜。",
+            "minutes": 1,
+            "coords": [
+              35.6764,
+              139.6993
+            ]
+          },
+          {
+            "name": "竹下通り",
+            "time": "1時間",
+            "description": "カワイイ文化の発信地。",
+            "minutes": 2,
+            "coords": [
+              35.6712,
+              139.7042
+            ]
+          }
+        ]
       },
       {
         "id": "F16",
@@ -763,7 +1223,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.659092,
           139.70257
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "渋谷スクランブル交差点",
+            "time": "15分",
+            "description": "世界的に有名な交差点。",
+            "minutes": 1,
+            "coords": [
+              35.6595,
+              139.7004
+            ]
+          },
+          {
+            "name": "SHIBUYA SKY",
+            "time": "1.5時間",
+            "description": "渋谷最高峰のパノラマビュー。",
+            "minutes": 0,
+            "coords": [
+              35.6585,
+              139.7013
+            ]
+          },
+          {
+            "name": "MIYASHITA PARK",
+            "time": "1時間",
+            "description": "公園・商業・ホテルが一体となった施設。",
+            "minutes": 3,
+            "coords": [
+              35.6622,
+              139.7024
+            ]
+          }
+        ]
       }
     ]
   },
@@ -779,7 +1270,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.659097,
           139.702673
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "渋谷スクランブル交差点",
+            "time": "15分",
+            "description": "世界的に有名な交差点。",
+            "minutes": 1,
+            "coords": [
+              35.6595,
+              139.7004
+            ]
+          },
+          {
+            "name": "SHIBUYA SKY",
+            "time": "1.5時間",
+            "description": "渋谷最高峰のパノラマビュー。",
+            "minutes": 0,
+            "coords": [
+              35.6585,
+              139.7013
+            ]
+          },
+          {
+            "name": "MIYASHITA PARK",
+            "time": "1時間",
+            "description": "公園・商業・ホテルが一体となった施設。",
+            "minutes": 3,
+            "coords": [
+              35.6622,
+              139.7024
+            ]
+          }
+        ]
       },
       {
         "id": "G02",
@@ -788,7 +1310,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.665042,
           139.712473
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "表参道ヒルズ",
+            "time": "1.5時間",
+            "description": "最先端のトレンド発信地。",
+            "minutes": 2,
+            "coords": [
+              35.6672,
+              139.709
+            ]
+          },
+          {
+            "name": "根津美術館",
+            "time": "1.5時間",
+            "description": "日本・東洋の古美術と見事な庭園。",
+            "minutes": 8,
+            "coords": [
+              35.6631,
+              139.718
+            ]
+          }
+        ]
       },
       {
         "id": "G03",
@@ -815,7 +1358,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.676845,
           139.737347
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "豊川稲荷東京別院",
+            "time": "30分",
+            "description": "芸能人も訪れるパワースポット。",
+            "minutes": 5,
+            "coords": [
+              35.6763,
+              139.7329
+            ]
+          }
+        ]
       },
       {
         "id": "G06",
@@ -851,7 +1405,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.6715,
           139.765366
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "銀座三越",
+            "time": "2時間",
+            "description": "銀座のランドマーク的デパート。",
+            "minutes": 1,
+            "coords": [
+              35.6716,
+              139.7656
+            ]
+          },
+          {
+            "name": "歌舞伎座",
+            "time": "1時間",
+            "description": "日本の伝統芸能、歌舞伎の殿堂。",
+            "minutes": 5,
+            "coords": [
+              35.6695,
+              139.7679
+            ]
+          },
+          {
+            "name": "銀座シックス",
+            "time": "2時間",
+            "description": "ラグジュアリーな複合商業施設。",
+            "minutes": 3,
+            "coords": [
+              35.6696,
+              139.764
+            ]
+          }
+        ]
       },
       {
         "id": "G10",
@@ -869,7 +1454,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.681879,
           139.773335
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "日本橋",
+            "time": "15分",
+            "description": "日本の道路の起点。",
+            "minutes": 1,
+            "coords": [
+              35.6836,
+              139.7743
+            ]
+          },
+          {
+            "name": "COREDO室町",
+            "time": "2時間",
+            "description": "日本の「和」を感じる商業施設。",
+            "minutes": 3,
+            "coords": [
+              35.6865,
+              139.7745
+            ]
+          }
+        ]
       },
       {
         "id": "G12",
@@ -914,7 +1520,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.711835,
           139.775625
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "上野恩賜公園",
+            "time": "1時間",
+            "description": "美術館や博物館が集まる文化の森。",
+            "minutes": 2,
+            "coords": [
+              35.7141,
+              139.7741
+            ]
+          },
+          {
+            "name": "上野動物園",
+            "time": "3時間",
+            "description": "パンダで有名な日本最古の動物園。",
+            "minutes": 5,
+            "coords": [
+              35.7166,
+              139.7713
+            ]
+          },
+          {
+            "name": "アメ横商店街",
+            "time": "1.5時間",
+            "description": "活気あふれる商店街。",
+            "minutes": 3,
+            "coords": [
+              35.7099,
+              139.7745
+            ]
+          }
+        ]
       },
       {
         "id": "G17",
@@ -941,7 +1578,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.710746,
           139.797774
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "浅草寺・雷門",
+            "time": "2時間",
+            "description": "東京最古の寺院。",
+            "minutes": 5,
+            "coords": [
+              35.7111,
+              139.7963
+            ]
+          },
+          {
+            "name": "仲見世通り",
+            "time": "1時間",
+            "description": "日本最古の商店街の一つ。",
+            "minutes": 5,
+            "coords": [
+              35.7115,
+              139.7964
+            ]
+          },
+          {
+            "name": "東京スカイツリー",
+            "time": "2.5時間",
+            "description": "隅田川を越えて徒歩圏内。",
+            "minutes": 20,
+            "coords": [
+              35.71,
+              139.8107
+            ]
+          }
+        ]
       }
     ]
   },
@@ -957,7 +1625,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.65945,
           139.701035
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "渋谷スクランブル交差点",
+            "time": "15分",
+            "description": "世界的に有名な交差点。",
+            "minutes": 1,
+            "coords": [
+              35.6595,
+              139.7004
+            ]
+          },
+          {
+            "name": "SHIBUYA SKY",
+            "time": "1.5時間",
+            "description": "渋谷最高峰のパノラマビュー。",
+            "minutes": 0,
+            "coords": [
+              35.6585,
+              139.7013
+            ]
+          },
+          {
+            "name": "MIYASHITA PARK",
+            "time": "1時間",
+            "description": "公園・商業・ホテルが一体となった施設。",
+            "minutes": 3,
+            "coords": [
+              35.6622,
+              139.7024
+            ]
+          }
+        ]
       },
       {
         "id": "Z02",
@@ -966,7 +1665,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.665143,
           139.712383
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "表参道ヒルズ",
+            "time": "1.5時間",
+            "description": "最先端のトレンド発信地。",
+            "minutes": 2,
+            "coords": [
+              35.6672,
+              139.709
+            ]
+          },
+          {
+            "name": "根津美術館",
+            "time": "1.5時間",
+            "description": "日本・東洋の古美術と見事な庭園。",
+            "minutes": 8,
+            "coords": [
+              35.6631,
+              139.718
+            ]
+          }
+        ]
       },
       {
         "id": "Z03",
@@ -984,7 +1704,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.678407,
           139.738865
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "国会議事堂",
+            "time": "1時間",
+            "description": "日本の政治の中心。",
+            "minutes": 5,
+            "coords": [
+              35.6759,
+              139.7448
+            ]
+          }
+        ]
       },
       {
         "id": "Z05",
@@ -1002,7 +1733,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.695501,
           139.751117
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "日本武道館",
+            "time": "30分",
+            "description": "武道と音楽の聖地。",
+            "minutes": 5,
+            "coords": [
+              35.6933,
+              139.7498
+            ]
+          },
+          {
+            "name": "千鳥ヶ淵",
+            "time": "45分",
+            "description": "桜の名所として有名なお堀。",
+            "minutes": 5,
+            "coords": [
+              35.6917,
+              139.7483
+            ]
+          }
+        ]
       },
       {
         "id": "Z07",
@@ -1011,7 +1763,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.696021,
           139.75756
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "神保町古書店街",
+            "time": "2時間",
+            "description": "世界最大級の古書店街。",
+            "minutes": 1,
+            "coords": [
+              35.6955,
+              139.7573
+            ]
+          }
+        ]
       },
       {
         "id": "Z08",
@@ -1020,7 +1783,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.686745,
           139.764905
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "皇居東御苑",
+            "time": "1.5時間",
+            "description": "旧江戸城の本丸・二の丸・三の丸跡。",
+            "minutes": 5,
+            "coords": [
+              35.6869,
+              139.7565
+            ]
+          }
+        ]
       },
       {
         "id": "Z09",
@@ -1047,7 +1821,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.682119,
           139.799841
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京都現代美術館(MOT)",
+            "time": "2.5時間",
+            "description": "現代アートの拠点。",
+            "minutes": 10,
+            "coords": [
+              35.6811,
+              139.808
+            ]
+          },
+          {
+            "name": "清澄庭園",
+            "time": "1時間",
+            "description": "明治の代表的な「回遊式林泉庭園」。",
+            "minutes": 3,
+            "coords": [
+              35.6806,
+              139.7997
+            ]
+          },
+          {
+            "name": "カフェ巡り",
+            "time": "1.5時間",
+            "description": "「コーヒーの街」として有名。",
+            "minutes": 0,
+            "coords": [
+              35.683,
+              139.8
+            ]
+          }
+        ]
       },
       {
         "id": "Z12",
@@ -1090,7 +1895,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.644108,
           139.698833
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "目黒川",
+            "time": "1時間",
+            "description": "桜の名所。川沿いにお洒落な店が並ぶ。",
+            "minutes": 1,
+            "coords": [
+              35.6443,
+              139.6991
+            ]
+          }
+        ]
       },
       {
         "id": "H02",
@@ -1099,7 +1915,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.64704,
           139.708701
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "恵比寿ガーデンプレイス",
+            "time": "2時間",
+            "description": "大人の雰囲気漂う複合施設。",
+            "minutes": 7,
+            "coords": [
+              35.6423,
+              139.7135
+            ]
+          }
+        ]
       },
       {
         "id": "H03",
@@ -1108,7 +1935,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.651499,
           139.722209
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "有栖川宮記念公園",
+            "time": "1時間",
+            "description": "起伏に富んだ緑豊かな公園。",
+            "minutes": 3,
+            "coords": [
+              35.6521,
+              139.7237
+            ]
+          }
+        ]
       },
       {
         "id": "H04",
@@ -1117,7 +1955,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.6628,
           139.731155
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "六本木ヒルズ",
+            "time": "2.5時間",
+            "description": "展望台、美術館、映画館がある複合施設。",
+            "minutes": 0,
+            "coords": [
+              35.6604,
+              139.7292
+            ]
+          },
+          {
+            "name": "東京ミッドタウン",
+            "time": "2時間",
+            "description": "デザインとアート、緑が融合した街。",
+            "minutes": 5,
+            "coords": [
+              35.6657,
+              139.7309
+            ]
+          }
+        ]
       },
       {
         "id": "H05",
@@ -1126,7 +1985,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.662625,
           139.744725
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京タワー",
+            "time": "1.5時間",
+            "description": "東京のシンボル。",
+            "minutes": 7,
+            "coords": [
+              35.6586,
+              139.7454
+            ]
+          }
+        ]
       },
       {
         "id": "H06",
@@ -1135,7 +2005,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.667309,
           139.747738
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "虎ノ門ヒルズ",
+            "time": "1.5時間",
+            "description": "未来的な超高層複合タワー。",
+            "minutes": 0,
+            "coords": [
+              35.6669,
+              139.7496
+            ]
+          }
+        ]
       },
       {
         "id": "H07",
@@ -1153,7 +2034,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.674271,
           139.7606
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "日比谷公園",
+            "time": "1時間",
+            "description": "日本初の洋風近代式公園。",
+            "minutes": 1,
+            "coords": [
+              35.6736,
+              139.756
+            ]
+          },
+          {
+            "name": "東京ミッドタウン日比谷",
+            "time": "1.5時間",
+            "description": "映画・演劇・食事の中心地。",
+            "minutes": 0,
+            "coords": [
+              35.6738,
+              139.7584
+            ]
+          }
+        ]
       },
       {
         "id": "H09",
@@ -1162,7 +2064,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.671983,
           139.764007
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "銀座三越",
+            "time": "2時間",
+            "description": "銀座のランドマーク的デパート。",
+            "minutes": 1,
+            "coords": [
+              35.6716,
+              139.7656
+            ]
+          },
+          {
+            "name": "歌舞伎座",
+            "time": "1時間",
+            "description": "日本の伝統芸能、歌舞伎の殿堂。",
+            "minutes": 5,
+            "coords": [
+              35.6695,
+              139.7679
+            ]
+          },
+          {
+            "name": "銀座シックス",
+            "time": "2時間",
+            "description": "ラグジュアリーな複合商業施設。",
+            "minutes": 3,
+            "coords": [
+              35.6696,
+              139.764
+            ]
+          }
+        ]
       },
       {
         "id": "H10",
@@ -1180,7 +2113,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.667928,
           139.772473
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "築地場外市場",
+            "time": "2時間",
+            "description": "新鮮な海産物と活気ある市場。",
+            "minutes": 3,
+            "coords": [
+              35.6655,
+              139.7707
+            ]
+          },
+          {
+            "name": "築地本願寺",
+            "time": "30分",
+            "description": "古代インド様式の独特な外観。",
+            "minutes": 1,
+            "coords": [
+              35.6672,
+              139.7723
+            ]
+          }
+        ]
       },
       {
         "id": "H12",
@@ -1225,7 +2179,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.697965,
           139.775529
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "電気街",
+            "time": "2時間",
+            "description": "アニメ、ゲーム、電子部品の聖地。",
+            "minutes": 2,
+            "coords": [
+              35.6983,
+              139.7731
+            ]
+          }
+        ]
       },
       {
         "id": "H17",
@@ -1243,7 +2208,38 @@ export const METRO_DATA: Record<string, Line> = {
           35.711558,
           139.777061
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "上野恩賜公園",
+            "time": "1時間",
+            "description": "美術館や博物館が集まる文化の森。",
+            "minutes": 2,
+            "coords": [
+              35.7141,
+              139.7741
+            ]
+          },
+          {
+            "name": "上野動物園",
+            "time": "3時間",
+            "description": "パンダで有名な日本最古の動物園。",
+            "minutes": 5,
+            "coords": [
+              35.7166,
+              139.7713
+            ]
+          },
+          {
+            "name": "アメ横商店街",
+            "time": "1.5時間",
+            "description": "活気あふれる商店街。",
+            "minutes": 3,
+            "coords": [
+              35.7099,
+              139.7745
+            ]
+          }
+        ]
       },
       {
         "id": "H19",
@@ -1279,7 +2275,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.749904,
           139.805591
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "宿場町通り",
+            "time": "1時間",
+            "description": "日光街道の宿場町の面影を残す。",
+            "minutes": 5,
+            "coords": [
+              35.7513,
+              139.8033
+            ]
+          }
+        ]
       }
     ]
   },
@@ -1340,7 +2347,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.701403,
           139.746521
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京大神宮",
+            "time": "45分",
+            "description": "東京のお伊勢さま。縁結びで有名。",
+            "minutes": 5,
+            "coords": [
+              35.6998,
+              139.746
+            ]
+          },
+          {
+            "name": "神楽坂",
+            "time": "2時間",
+            "description": "路地裏散策が楽しい粋な街。",
+            "minutes": 1,
+            "coords": [
+              35.7011,
+              139.7408
+            ]
+          }
+        ]
       },
       {
         "id": "T07",
@@ -1349,7 +2377,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.696091,
           139.751265
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "日本武道館",
+            "time": "30分",
+            "description": "武道と音楽の聖地。",
+            "minutes": 5,
+            "coords": [
+              35.6933,
+              139.7498
+            ]
+          },
+          {
+            "name": "千鳥ヶ淵",
+            "time": "45分",
+            "description": "桜の名所として有名なお堀。",
+            "minutes": 5,
+            "coords": [
+              35.6917,
+              139.7483
+            ]
+          }
+        ]
       },
       {
         "id": "T08",
@@ -1367,7 +2416,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.684697,
           139.76603
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "皇居東御苑",
+            "time": "1.5時間",
+            "description": "旧江戸城の本丸・二の丸・三の丸跡。",
+            "minutes": 5,
+            "coords": [
+              35.6869,
+              139.7565
+            ]
+          }
+        ]
       },
       {
         "id": "T10",
@@ -1376,7 +2436,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.682376,
           139.774101
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "日本橋",
+            "time": "15分",
+            "description": "日本の道路の起点。",
+            "minutes": 1,
+            "coords": [
+              35.6836,
+              139.7743
+            ]
+          },
+          {
+            "name": "COREDO室町",
+            "time": "2時間",
+            "description": "日本の「和」を感じる商業施設。",
+            "minutes": 3,
+            "coords": [
+              35.6865,
+              139.7745
+            ]
+          }
+        ]
       },
       {
         "id": "T11",
@@ -1394,7 +2475,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.671892,
           139.796099
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "富岡八幡宮",
+            "time": "45分",
+            "description": "江戸最大の八幡様。",
+            "minutes": 3,
+            "coords": [
+              35.6719,
+              139.7996
+            ]
+          },
+          {
+            "name": "深川不動堂",
+            "time": "30分",
+            "description": "護摩祈祷が迫力満点。",
+            "minutes": 2,
+            "coords": [
+              35.6726,
+              139.7978
+            ]
+          }
+        ]
       },
       {
         "id": "T13",
@@ -1403,7 +2505,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.669356,
           139.807115
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "木場公園",
+            "time": "1.5時間",
+            "description": "広大な芝生広場と美術館がある。",
+            "minutes": 5,
+            "coords": [
+              35.6754,
+              139.808
+            ]
+          }
+        ]
       },
       {
         "id": "T14",
@@ -1439,7 +2552,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.663616,
           139.87253
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "地下鉄博物館",
+            "time": "1.5時間",
+            "description": "地下鉄の歴史と技術を学べる。",
+            "minutes": 0,
+            "coords": [
+              35.6634,
+              139.8732
+            ]
+          }
+        ]
       },
       {
         "id": "T18",
@@ -1448,7 +2572,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.665903,
           139.893236
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "浦安市郷土博物館",
+            "time": "1時間",
+            "description": "昭和の浦安の街並みを再現。",
+            "minutes": 20,
+            "coords": [
+              35.656,
+              139.8943
+            ]
+          }
+        ]
       },
       {
         "id": "T19",
@@ -1581,7 +2716,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.729185,
           139.710885
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "サンシャイン60展望台",
+            "time": "1.5時間",
+            "description": "「てんぼうパーク」としてリニューアル。",
+            "minutes": 10,
+            "coords": [
+              35.7289,
+              139.7197
+            ]
+          },
+          {
+            "name": "南池袋公園",
+            "time": "1時間",
+            "description": "芝生が気持ちいい都会の公園。",
+            "minutes": 5,
+            "coords": [
+              35.7266,
+              139.7153
+            ]
+          }
+        ]
       },
       {
         "id": "Y10",
@@ -1617,7 +2773,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.701342,
           139.743207
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "東京大神宮",
+            "time": "45分",
+            "description": "東京のお伊勢さま。縁結びで有名。",
+            "minutes": 5,
+            "coords": [
+              35.6998,
+              139.746
+            ]
+          },
+          {
+            "name": "神楽坂",
+            "time": "2時間",
+            "description": "路地裏散策が楽しい粋な街。",
+            "minutes": 1,
+            "coords": [
+              35.7011,
+              139.7408
+            ]
+          }
+        ]
       },
       {
         "id": "Y14",
@@ -1644,7 +2821,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.677895,
           139.741773
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "国会議事堂",
+            "time": "1時間",
+            "description": "日本の政治の中心。",
+            "minutes": 5,
+            "coords": [
+              35.6759,
+              139.7448
+            ]
+          }
+        ]
       },
       {
         "id": "Y17",
@@ -1689,7 +2877,18 @@ export const METRO_DATA: Record<string, Line> = {
           35.664711,
           139.784405
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "月島もんじゃストリート",
+            "time": "1.5時間",
+            "description": "もんじゃ焼き店が軒を連ねる。",
+            "minutes": 1,
+            "coords": [
+              35.6635,
+              139.7816
+            ]
+          }
+        ]
       },
       {
         "id": "Y22",
@@ -1698,7 +2897,28 @@ export const METRO_DATA: Record<string, Line> = {
           35.655153,
           139.795994
         ],
-        "spots": []
+        "spots": [
+          {
+            "name": "ららぽーと豊洲",
+            "time": "2.5時間",
+            "description": "海沿いのロケーション抜群なSC。",
+            "minutes": 2,
+            "coords": [
+              35.6562,
+              139.7915
+            ]
+          },
+          {
+            "name": "チームラボプラネッツ",
+            "time": "2時間",
+            "description": "水に入るミュージアム。",
+            "minutes": 10,
+            "coords": [
+              35.6457,
+              139.791
+            ]
+          }
+        ]
       },
       {
         "id": "Y23",
@@ -1764,3 +2984,4 @@ export const METRO_DATA: Record<string, Line> = {
     ]
   }
 };
+

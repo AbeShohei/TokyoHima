@@ -1,6 +1,7 @@
 import fs from 'fs';
 import https from 'https';
 import path from 'path';
+import { STATION_SPOTS } from './spotsData.js';
 
 // Hardcoded key from .env.local (UTF-16 decoded)
 const API_KEY = "admyc5p9ythe81w1ie8bgdtjd67mw4ocdgafh5aathjuye8m8r4a1aiio2s4ghon";
@@ -75,11 +76,19 @@ const main = async () => {
                 const sData = stationMap.get(item['odpt:station']);
                 if (sData) {
                     const sId = sData['odpt:stationCode'] || item['odpt:station'];
+                    const sName = sData['dc:title'];
+
+                    // Merge Recommended Spots
+                    let spots = [];
+                    if (STATION_SPOTS[sName]) {
+                        spots = STATION_SPOTS[sName];
+                    }
+
                     lineStations.push({
                         id: sId,
-                        name: sData['dc:title'],
+                        name: sName,
                         coordinates: [sData['geo:lat'], sData['geo:long']],
-                        spots: []
+                        spots: spots
                     });
                 }
             });
@@ -95,6 +104,9 @@ const main = async () => {
         const fileContent = `export interface Spot {
   name: string;
   time: string;
+  description?: string;
+  minutes?: number;
+  coords?: [number, number];
 }
 
 export interface Station {
@@ -113,6 +125,7 @@ export interface Line {
 
 // Full Data Generated from ODPT API
 export const METRO_DATA: Record<string, Line> = ${JSON.stringify(fullData, null, 2)};
+
 `;
 
         const outputPath = path.resolve(process.cwd(), 'data/metroData.ts');

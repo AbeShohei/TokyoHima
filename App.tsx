@@ -513,20 +513,46 @@ export default function App() {
 
                 <div className="mb-6">
                   <h3 className="font-bold text-sm mb-2 text-neutral-400 uppercase tracking-widest">Recommended Spots</h3>
-                  <ul className="space-y-2">
+                  <ul className="space-y-3">
                     {(destination.originalStations[0]?.spots || []).map((spot, i) => (
-                      <li key={i} className="flex items-center justify-between bg-white border border-neutral-100 p-3 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                        <div className="flex items-center">
-                          <span className="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-bold mr-3 shrink-0">{i + 1}</span>
-                          <span className="text-sm font-medium leading-tight">{spot.name}</span>
+                      <li key={i} className="bg-white border border-neutral-100 p-3 rounded-lg shadow-sm hover:shadow-md transition-all">
+                        <div className="flex justify-between items-start mb-1">
+                          <div className="flex items-center">
+                            <span className="w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-[10px] font-bold mr-2 shrink-0">{i + 1}</span>
+                            <span className="font-bold text-sm">{spot.name}</span>
+                          </div>
+                          <span className="text-[10px] bg-neutral-100 text-neutral-600 px-2 py-0.5 rounded-full whitespace-nowrap ml-2">
+                            所要: {spot.time}
+                          </span>
                         </div>
-                        <span className="ml-2 text-[10px] bg-neutral-100 text-neutral-500 px-2 py-1 rounded-full whitespace-nowrap">
-                          {spot.time}
-                        </span>
+
+                        {/* Description */}
+                        {spot.description && (
+                          <div className="text-xs text-neutral-500 mb-2 pl-7 leading-relaxed">
+                            {spot.description}
+                          </div>
+                        )}
+
+                        {/* Footer: Walking Time & Coordinates */}
+                        <div className="flex items-center justify-end space-x-3 pl-7 text-[10px] text-neutral-400 font-mono">
+                          {spot.minutes !== undefined && (
+                            <span className="flex items-center">
+                              <span className="mr-1">🚶</span>駅徒歩{spot.minutes}分
+                            </span>
+                          )}
+                          {spot.coords && (
+                            <span className="flex items-center" title="座標">
+                              <span className="mr-1">📍</span>{spot.coords[0].toFixed(4)}, {spot.coords[1].toFixed(4)}
+                            </span>
+                          )}
+                        </div>
                       </li>
                     ))}
                     {(!destination.originalStations[0]?.spots?.length) && (
-                      <li className="text-center text-neutral-400 text-sm">スポット情報はまだありません</li>
+                      <li className="text-center text-neutral-400 text-sm py-4 bg-neutral-50 rounded-lg">
+                        スポット情報はまだありません
+                        <div className="text-[10px] mt-1 text-neutral-300">No spots available</div>
+                      </li>
                     )}
                   </ul>
                 </div>
