@@ -71,56 +71,57 @@ const RealTicket = ({
   return (
     <div className="relative w-full aspect-[1.8/1] shadow-xl overflow-hidden rounded-[4px] text-black font-sans select-none" style={patternStyle}>
       {/* Top Border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-white opacity-50"></div>
+      <div className="absolute top-0 left-0 right-0 h-[1%] bg-white opacity-50"></div>
 
-      {/* Content Container - Added padding for vertical text safety */}
-      <div className="absolute inset-0 px-8 py-3 flex flex-col">
+      {/* Content Container - Responsive Padding */}
+      <div className="absolute inset-0 px-[5%] py-[3%] flex flex-col">
 
         {/* Header: Metro Name (Top Right) */}
-        <div className="flex flex-col items-end w-full mb-1">
-          <div className="text-xl font-bold tracking-tight leading-none">東京メトロ線</div>
-          <div className="text-xs font-bold tracking-tight leading-none mt-0.5">(東京地下鉄)</div>
+        <div className="flex flex-col items-end w-full mb-[1%]">
+          <div className="text-[3.5cqw] md:text-xl font-bold tracking-tight leading-none">東京メトロ線</div>
+          <div className="text-[2cqw] md:text-xs font-bold tracking-tight leading-none mt-0.5">(東京地下鉄)</div>
         </div>
 
         {/* Middle Section: From -> Price */}
-        <div className="flex items-end justify-center w-full mt-1 space-x-3">
+        <div className="flex items-end justify-center w-full mt-[1%] space-x-1 md:space-x-3">
           {/* From Station */}
           <div className="flex flex-col items-center mb-1">
-            <span className="text-[9px] font-bold opacity-70 mb-0.5">From</span>
-            <span className={`font-bold border-b-2 border-black pb-0 leading-none whitespace-nowrap ${getFontSize(fromNameClean, 'text-3xl', 'text-2xl', 'text-xl')}`}>
+            <span className="text-[2cqw] md:text-[9px] font-bold opacity-70 mb-0.5">From</span>
+            <span className={`font-bold border-b-2 border-black pb-0 leading-none whitespace-nowrap ${getFontSize(fromNameClean, 'text-[5cqw] md:text-3xl', 'text-[4cqw] md:text-2xl', 'text-[3cqw] md:text-xl')}`}>
               {fromNameClean}
             </span>
           </div>
 
           {/* Arrow */}
-          <div className="mb-2">
-            <div className="w-0 h-0 border-l-[14px] border-l-black border-y-[8px] border-y-transparent"></div>
+          <div className="mb-[1%] mx-[1%]">
+            {/* Responsive Arrow using SVG or scalable borders */}
+            <div className="w-0 h-0 border-l-[2.5cqw] md:border-l-[14px] border-l-black border-y-[1.5cqw] md:border-y-[8px] border-y-transparent"></div>
           </div>
 
           {/* Price */}
           <div className="flex items-baseline">
-            <span className="text-6xl font-black tracking-tighter leading-none font-mono">
+            <span className="text-[12cqw] md:text-6xl font-black tracking-tighter leading-none font-mono">
               {priceVal.replace(/[^0-9]/g, '') || '170'}
             </span>
             <span className="flex flex-col items-start ml-1">
-              <span className="text-lg font-bold leading-none">円</span>
-              <span className="text-sm font-bold bg-black text-white px-1 leading-none mt-0.5">区間</span>
+              <span className="text-[3cqw] md:text-lg font-bold leading-none">円</span>
+              <span className="text-[2.5cqw] md:text-sm font-bold bg-black text-white px-1 leading-none mt-0.5">区間</span>
             </span>
           </div>
         </div>
 
         {/* Bottom Section: To Station (Centered/Right) */}
-        <div className="flex items-baseline justify-center w-full mt-2">
-          <span className="text-sm font-bold mr-2 opacity-80">To</span>
-          <span className={`font-black tracking-tight leading-none whitespace-nowrap ${getFontSize(toNameClean, 'text-5xl', 'text-4xl', 'text-3xl')}`}>
+        <div className="flex items-baseline justify-center w-full mt-[2%]">
+          <span className="text-[3cqw] md:text-sm font-bold mr-2 opacity-80">To</span>
+          <span className={`font-black tracking-tight leading-none whitespace-nowrap ${getFontSize(toNameClean, 'text-[8cqw] md:text-5xl', 'text-[6cqw] md:text-4xl', 'text-[5cqw] md:text-3xl')}`}>
             {toNameClean}
           </span>
-          <span className="text-lg font-bold ml-1">まで</span>
+          <span className="text-[3cqw] md:text-lg font-bold ml-1">まで</span>
         </div>
 
         {/* Footer Info (Bottom) */}
         <div className="mt-auto flex justify-between items-end w-full pt-1">
-          <div className="text-[9px] font-bold leading-tight space-y-0.5">
+          <div className="text-[2cqw] md:text-[9px] font-bold leading-tight space-y-0.5">
             <div className="flex items-center space-x-1">
               <span className="bg-black text-white px-1 py-px rounded-sm border border-transparent">地</span>
               <span>発売当日限り有効</span>
@@ -129,14 +130,14 @@ const RealTicket = ({
           </div>
 
           <div className="flex flex-col items-end">
-            <div className="text-xl font-bold mb-0 leading-none">大人</div>
+            <div className="text-[4cqw] md:text-xl font-bold mb-0 leading-none">大人</div>
           </div>
         </div>
       </div>
 
       {/* Vertical Date (Left) */}
       <div
-        className="absolute left-1.5 top-0 bottom-0 flex flex-col justify-center items-center text-lg font-mono tracking-widest leading-none opacity-80"
+        className="absolute left-[1%] top-0 bottom-0 flex flex-col justify-center items-center text-[2.5cqw] md:text-lg font-mono tracking-widest leading-none opacity-80"
         style={{ writingMode: 'vertical-rl', textOrientation: 'sideways' }}
       >
         {dateStr}
@@ -144,14 +145,14 @@ const RealTicket = ({
 
       {/* Vertical Serial Number (Right) */}
       <div
-        className="absolute right-1.5 top-0 bottom-0 flex flex-col justify-center items-center text-lg font-mono tracking-widest leading-none opacity-80"
+        className="absolute right-[1%] top-0 bottom-0 flex flex-col justify-center items-center text-[2.5cqw] md:text-lg font-mono tracking-widest leading-none opacity-80"
         style={{ writingMode: 'vertical-rl', textOrientation: 'sideways' }}
       >
         {priceVal}
       </div>
 
       {/* Punch Hole */}
-      <div className="absolute -left-1.5 top-1/2 w-4 h-4 bg-neutral-900 rounded-full"></div>
+      <div className="absolute -left-[1.5%] top-1/2 w-[4%] h-[8%] md:w-4 md:h-4 bg-neutral-900 rounded-full"></div>
     </div>
   );
 };
